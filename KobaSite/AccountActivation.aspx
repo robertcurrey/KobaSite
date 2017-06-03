@@ -28,7 +28,7 @@
                 <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">
-                        <asp:Label ID="lblPleaseEnterCode" runat="server" Text="Almost there! Just activate your account." Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="lblPleaseEnterCode" runat="server" Text="Almost there! Just activate your account using the code in the email we sent you." Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
                     </div>
                     
                     <asp:Label ID="lblActivationCode" runat="server" Text="Activation Code:" Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="150px"></asp:Label>

@@ -1,0 +1,52 @@
+﻿body {
+    height: auto;
+    background-image: url("KobaSiteLoginWallpaper.png")
+}
+.pageBackground {
+    
+    text-align: center;
+    padding: 50px;
+}
+.textBoxes
+{
+    input[type=text], select;
+    width: 100%;
+    padding: 12px 20px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.loginForm {
+    border-radius: 10px;
+    box-shadow: 10px;
+    background-color: #f2f2f2;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.lblWelcome{
+    text-align: center;
+    padding-bottom:50px;
+    padding-top: 50px;
+}
+.loginButtons {
+    background-color: #4CAF50; /* Green */
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+.createUserBtn {
+    background-color: gray;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}

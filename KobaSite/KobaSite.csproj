@@ -137,9 +137,6 @@
     <Compile Include="CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DBConnect.cs" />
-    <Compile Include="Classes\DBManager.cs" />
-    <Compile Include="Classes\EmailModules.cs" />
     <Compile Include="Content\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +155,9 @@
     <Compile Include="Welcome.aspx.designer.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,9 +6,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-C:\Users\rober\documents\visual studio 2017\Projects\KobaSite\KobaSite\Classes\DBConnect.cs
-C:\Users\rober\documents\visual studio 2017\Projects\KobaSite\KobaSite\Classes\DBManager.cs
-C:\Users\rober\documents\visual studio 2017\Projects\KobaSite\KobaSite\Classes\EmailModules.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

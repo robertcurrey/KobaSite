@@ -130,6 +130,9 @@
     <Compile Include="AccountActivation.aspx.designer.cs">
       <DependentUpon>AccountActivation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DBConnect.cs" />
+    <Compile Include="Classes\DBManager.cs" />
+    <Compile Include="Classes\EmailModules.cs" />
     <Compile Include="CreateAccount.aspx.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,9 +140,6 @@
     <Compile Include="CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DBConnect.cs" />
-    <Compile Include="Classes\DBManager.cs" />
-    <Compile Include="Classes\EmailModules.cs" />
     <Compile Include="Content\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -159,6 +159,7 @@
       <DependentUpon>Welcome.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

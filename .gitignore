@@ -262,3 +262,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/KobaSite/Classes/DBConnect.cs
+/KobaSite/Classes/DBManager.cs
+/KobaSite/Classes/EmailModules.cs

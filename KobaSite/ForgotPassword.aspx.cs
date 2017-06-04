@@ -40,36 +40,30 @@ namespace KobaSite
                 if (email == dbEmail)
                 {
                     accountExistsFlag = true;
+                    CheckAccounts();
                 }
-
-                //Attempt to create account
-                CheckAccounts();
             }
             catch
             {
-                //Attempt to create account
-                CheckAccounts();
+                lblMsg.Text = "Sorry, this email doesn't have an account here!";
+                lblMsg.Visible = true;
             }
         }
 
         private void CheckAccounts()
         {
-            if (accountExistsFlag == false)
-            {
-                lblMsg.Text = "Sorry, this email doesn't have an account here!";
-                lblMsg.Visible = true;
-            }
-            else
+            if(accountExistsFlag == true)
             {
                 //Account exists!
 
                 //UPDATE USER PASSWORD TO TEMPORARY PASSWORD, SET USER FAKEPASSWORDACTIVEFLAG = TRUE
                 string newPassword1 = "x45vf";
                 string fakePasswordActiveFlag = "True";
-                objDBM.SetNewPassword(email, newPassword1, fakePasswordActiveFlag);
 
                 //Send email with temporary fake password
                 objEmail.SendTemporaryPasswordEmail(email, newPassword1);
+
+                objDBM.SetNewPassword(email, newPassword1, fakePasswordActiveFlag);
 
                 //Redirect to login
                 Response.Redirect("Welcome.aspx");

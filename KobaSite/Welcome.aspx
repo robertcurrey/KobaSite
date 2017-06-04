@@ -47,7 +47,7 @@
                     &emsp;<asp:Button ID="btnCreateUser" class="createUserBtn" runat="server" Text="Create Account" ForeColor="White" Width="170px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnCreateUser_Click" />
                     <br />
                     <br />
-                    <asp:Button ID="btnForgotPassword" class="createUserBtn" runat="server" Text="Forget Your Password?" ForeColor="White" Width="340px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnForgotPassword_Click" />
+                    <asp:Button ID="btnForgotPassword" class="createUserBtn" runat="server" Text="Forgot Your Password?" ForeColor="White" Width="340px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnForgotPassword_Click" />
 
                 </div>
             </div>

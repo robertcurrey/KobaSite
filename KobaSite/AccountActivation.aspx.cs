@@ -14,7 +14,6 @@ namespace KobaSite
 {
     public partial class AccountActivation : System.Web.UI.Page
     {
-        DBConnect objDB = new DBConnect();
         DBManager objDBM = new DBManager();
        
         string email;

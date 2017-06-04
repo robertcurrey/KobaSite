@@ -32,7 +32,7 @@
                     </div>
                     
                     <asp:Label ID="lblNewPass" runat="server" Text="New Password: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px" style="margin-left: 0px"></asp:Label>
-                    <asp:TextBox ID="txtNewPassword" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="255" placeholder="Enter a new password..." required="true" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="txtNewPassword" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="255" placeholder="Enter a new password..." required="true" type="password"></asp:TextBox>
                     <br />
                     <br />
                     <asp:Label ID="lblPassword" runat="server" Text="Re-enter New Password: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px"></asp:Label>

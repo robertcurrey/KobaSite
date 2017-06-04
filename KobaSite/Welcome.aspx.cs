@@ -16,6 +16,7 @@ namespace KobaSite
         DBManager objDBM = new DBManager();
 
         bool accountExistsFlag = false;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,6 +37,7 @@ namespace KobaSite
                     string dbEmail = dbUserPass.Tables[0].Rows[0]["Email Address"].ToString();
                     string dbPass = dbUserPass.Tables[0].Rows[0]["Password"].ToString();
                     string dbActivationFlag = (dbUserPass.Tables[0].Rows[0]["IsActivated"]).ToString();
+                    string dbFakePasswordActiveFlag = (dbUserPass.Tables[0].Rows[0]["FakePasswordActiveFlag"]).ToString();
 
                     if (email != dbEmail)
                     {
@@ -55,8 +57,17 @@ namespace KobaSite
                             }
                             else if (dbActivationFlag == "True")
                             {
-                                Session["CurrentUser"] = dbEmail;
-                                Response.Redirect("Home.aspx");
+                                if(dbFakePasswordActiveFlag == "False")
+                                {
+                                    Session["CurrentUser"] = dbEmail;
+                                    Response.Redirect("Home.aspx");
+                                }
+                                else if(dbFakePasswordActiveFlag == "True")
+                                {
+                                    Session["CurrentUser"] = dbEmail;
+                                    Response.Redirect("ChangePassword.aspx");
+                                }
+                                
                             }
                         }
                         else
@@ -85,6 +96,11 @@ namespace KobaSite
         protected void btnCreateUser_Click(object sender, EventArgs e)
         {
             Response.Redirect("CreateAccount.aspx");
+        }
+
+        protected void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ForgotPassword.aspx");
         }
     }
 }

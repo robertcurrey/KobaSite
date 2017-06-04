@@ -10,7 +10,7 @@
 namespace KobaSite {
     
     
-    public partial class Welcome {
+    public partial class ForgotPassword {
         
         /// <summary>
         /// form1 control.
@@ -49,13 +49,13 @@ namespace KobaSite {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLogin;
         
         /// <summary>
-        /// lblPleaseLogin control.
+        /// lblEnterAccount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPleaseLogin;
+        protected global::System.Web.UI.WebControls.Label lblEnterAccount;
         
         /// <summary>
         /// lblUsername control.
@@ -76,24 +76,6 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
         
         /// <summary>
-        /// lblPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
-        
-        /// <summary>
-        /// txtPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
-        /// <summary>
         /// lblMsg control.
         /// </summary>
         /// <remarks>
@@ -103,30 +85,12 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// btnSubmit control.
+        /// btnContinue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// btnCreateUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateUser;
-        
-        /// <summary>
-        /// btnForgotPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnForgotPassword;
+        protected global::System.Web.UI.WebControls.Button btnContinue;
     }
 }

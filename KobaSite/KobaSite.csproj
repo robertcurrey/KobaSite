@@ -78,8 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccountActivation.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="Content\Global.asax" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\parallax.css" />
@@ -130,6 +132,13 @@
     <Compile Include="AccountActivation.aspx.designer.cs">
       <DependentUpon>AccountActivation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DBConnect.cs" />
     <Compile Include="Classes\DBManager.cs" />
     <Compile Include="Classes\EmailModules.cs" />
@@ -142,6 +151,13 @@
     </Compile>
     <Compile Include="Content\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

@@ -18,8 +18,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--<div class="parallax-group">--%>
-           <%--  <img class="back" src="KobaSiteLoginWallpaper.png" />--%>
+        <%--<div class="parallax-group">--%>           
+        <%--<img class="back" src="KobaSiteLoginWallpaper.png" />--%>
             
            <div class="lblWelcome text-center">
                <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
@@ -45,14 +45,13 @@
                     <br />
                     <asp:Button ID="btnSubmit" class="loginButtons" runat="server" Text="Login" Width="170px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnSubmit_Click" />
                     &emsp;<asp:Button ID="btnCreateUser" class="createUserBtn" runat="server" Text="Create Account" ForeColor="White" Width="170px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnCreateUser_Click" />
+                    <br />
+                    <br />
+                    <asp:Button ID="btnForgotPassword" class="createUserBtn" runat="server" Text="Forget Your Password?" ForeColor="White" Width="340px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnForgotPassword_Click" />
+
                 </div>
             </div>
-        <%--</div>--%>
-
-        
-
-        
+        <%--</div>--%>   
     </form>
-
 </body>
 </html>

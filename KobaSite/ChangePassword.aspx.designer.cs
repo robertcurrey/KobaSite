@@ -10,7 +10,7 @@
 namespace KobaSite {
     
     
-    public partial class Welcome {
+    public partial class ChangePassword {
         
         /// <summary>
         /// form1 control.
@@ -22,13 +22,13 @@ namespace KobaSite {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblWelcome control.
+        /// lblChangePassHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWelcome;
+        protected global::System.Web.UI.WebControls.Label lblChangePassHeader;
         
         /// <summary>
         /// MasterLogin control.
@@ -49,31 +49,31 @@ namespace KobaSite {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLogin;
         
         /// <summary>
-        /// lblPleaseLogin control.
+        /// lblChangePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPleaseLogin;
+        protected global::System.Web.UI.WebControls.Label lblChangePass;
         
         /// <summary>
-        /// lblUsername control.
+        /// lblNewPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsername;
+        protected global::System.Web.UI.WebControls.Label lblNewPass;
         
         /// <summary>
-        /// txtUsername control.
+        /// txtNewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
         
         /// <summary>
         /// lblPassword control.
@@ -85,13 +85,13 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.Label lblPassword;
         
         /// <summary>
-        /// txtPassword control.
+        /// txtNewPassword2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword2;
         
         /// <summary>
         /// lblMsg control.
@@ -103,30 +103,21 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// btnSubmit control.
+        /// btnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
-        /// btnCreateUser control.
+        /// btnChangePassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateUser;
-        
-        /// <summary>
-        /// btnForgotPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnForgotPassword;
+        protected global::System.Web.UI.WebControls.Button btnChangePassword;
     }
 }

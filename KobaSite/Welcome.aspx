@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="Content/LoginCSS.css" rel="stylesheet" />
     <link href="Content/parallax.css" rel="stylesheet" />
+    <link href="Content/VideoBG.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
@@ -18,15 +19,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--<div class="parallax-group">--%>           
+        <%--<div class="parallax-group">--%>
         <%--<img class="back" src="KobaSiteLoginWallpaper.png" />--%>
-            
-           <div class="lblWelcome text-center">
-               <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
-           </div>
+        <div class="video-background">
+            <div class="video-foreground">
+                <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-            <div id="MasterLogin" class="jumbotron loginForm" runat="server">
-                <div id="divLogin" class="text-center" runat="server">
+        <div class="lblWelcome text-center">
+            <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
+        </div>
+
+        <div id="MasterLogin" class="jumbotron loginForm" runat="server">
+            <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">
                         <asp:Label ID="lblPleaseLogin" runat="server" Text="Please Login" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>

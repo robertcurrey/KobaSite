@@ -18,6 +18,7 @@ namespace KobaSite
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            bgVidLink.Src = "https://www.youtube.com/embed/FKu4v_boJ3o?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=FKu4v_boJ3o";
             email = GetEmail();
             lblChangePass.Text = ("Hi " + email + ", let's change your password.");
         }

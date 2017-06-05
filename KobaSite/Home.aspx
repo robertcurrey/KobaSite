@@ -14,21 +14,34 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+
+        <div class="jumbotron">
             <div class="video-background">
                 <div class="video-foreground">
-                    <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen ></iframe>
+                    <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-
-            <div id="greeting" class="jumbotron loginForm">
-                <div class="text-center">
-                    <h1>Hi!</h1>
-                    <p>This is a test of the video background. Exciting, isn't it :)</p>
-                </div>
-            </div>
-            <asp:Button ID="btnLogout" class="loginButtons text-center" Font-Names="Yu Gothic UI Light" Font-Size="Medium" runat="server" Text="Logout"  OnClick="btnLogout_Click" />
         </div>
+        
+
+        <div class="container">
+            <div id="radioPanel" class="row">
+                <div id="radioList" class="jumbotron col-xs-4">
+                    <asp:Button ID="btnRadio1" class="loginButtons" runat="server" Text="Nourish" OnClick="btnRadio1_Click"/>
+                </div>
+                <div id="descriptionField" runat="server" class="jumbotron col-xs-offset-1 col-xs-7" Visible="false">
+                    <asp:Label ID="lblRadioDescription" runat="server"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button ID="btnPlay" class="loginButtons" runat="server" Text="Play" OnClick="btnPlay_Click"/>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <asp:Button ID="btnLogout" class="loginButtons text-center" Font-Names="Yu Gothic UI Light" Font-Size="Medium" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+
     </form>
 </body>
 </html>

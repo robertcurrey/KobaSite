@@ -31,6 +31,42 @@ namespace KobaSite {
         protected global::System.Web.UI.HtmlControls.HtmlIframe bgVidLink;
         
         /// <summary>
+        /// btnRadio1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRadio1;
+        
+        /// <summary>
+        /// descriptionField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl descriptionField;
+        
+        /// <summary>
+        /// lblRadioDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRadioDescription;
+        
+        /// <summary>
+        /// btnPlay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPlay;
+        
+        /// <summary>
         /// btnLogout control.
         /// </summary>
         /// <remarks>

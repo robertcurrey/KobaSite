@@ -79,6 +79,7 @@
   <ItemGroup>
     <Content Include="AccountActivation.aspx" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="Content\VideoBG.css" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="Content\Global.asax" />
     <Content Include="ForgotPassword.aspx" />

@@ -15,13 +15,13 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="jumbotron">
+        
             <div class="video-background">
                 <div class="video-foreground">
                     <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
+        
         
 
         <div class="container">

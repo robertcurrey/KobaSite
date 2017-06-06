@@ -21,7 +21,6 @@ namespace KobaSite
         protected void Page_Load(object sender, EventArgs e)
         {
             Session.Clear();
-            bgVidLink.Src = "https://www.youtube.com/embed/FKu4v_boJ3o?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=FKu4v_boJ3o";
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

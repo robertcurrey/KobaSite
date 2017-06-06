@@ -21,11 +21,14 @@
 <body>
     <form id="form1" runat="server">
         <%--<div class="parallax-group">--%>           <%--  <img class="back" src="KobaSiteLoginWallpaper.png" />--%>
-        <div class="video-background">
-            <div class="video-foreground">
-                <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
+        
+        <!--
+            <div class="video-background">
+                <div class="video-foreground">
+                <iframe id="bgVidLink" runat="server" src="https://www.youtube.com/embed/fpViZkhpPHk?controls=0&iv_load_policy=3&showinfo=0&rel=0&autoplay=1&loop=1&modestbranding=0&playlist=fpViZkhpPHk" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>    
+        </div> -->    
 
            <div class="lblWelcome text-center">
                <asp:Label ID="lblActivate" runat="server" Text="Activate Account" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>

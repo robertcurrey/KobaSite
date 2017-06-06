@@ -14,25 +14,27 @@
     
     <title>Welcome</title>
 
-    <script>
-        
-    </script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
         <%--<div class="parallax-group">--%>
         <%--<img class="back" src="KobaSiteLoginWallpaper.png" />--%>
-        <div class="video-background">
-            <div class="video-foreground">
-                <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
+
+        <!--
+            <div class="video-background">
+                <div class="video-foreground">
+                <iframe id="bgVidLink" runat="server" src="https://www.youtube.com/embed/fpViZkhpPHk?controls=0&iv_load_policy=3&showinfo=0&rel=0&autoplay=1&loop=1&modestbranding=0&playlist=fpViZkhpPHk" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="lblWelcome text-center">
             <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
         </div>
 
-        <div id="MasterLogin" class="jumbotron loginForm" runat="server">
+        <div class="jumbotron">
+            <div id="MasterLogin" class="loginForm" runat="server">
             <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">
@@ -58,7 +60,10 @@
 
                 </div>
             </div>
+        </div>
+        
         <%--</div>--%>   
     </form>
+    
 </body>
 </html>

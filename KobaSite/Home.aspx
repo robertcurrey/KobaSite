@@ -35,7 +35,7 @@
             </nav>
         </div>
 
-        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+        <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div id="videoBG" runat="server" visible="false">
                     <div class="video-background">
@@ -54,7 +54,6 @@
 
 
         <div class="container">
-            
             <div id="radioPanel" class="row">
                 <div id="radioList" class="jumbotron col-xs-4">
                     <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
@@ -79,7 +78,11 @@
                             <asp:Label ID="lblRadioDescription" runat="server"></asp:Label>
                             <br />
                             <br />
-                            <asp:Button ID="btnPlay" class="loginButtons" runat="server" Text="Play" OnClick="btnPlay_Click" />
+                            <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+                                <ContentTemplate>
+                                    <asp:Button ID="btnPlay" class="loginButtons" runat="server" Text="Play" OnClick="btnPlay_Click" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                         </div>
                     </ContentTemplate>
                     <Triggers>
@@ -87,8 +90,11 @@
                         <asp:AsyncPostBackTrigger ControlID="btnRadio2" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
-                
-
+            </div>
+            <div id="playPanel" class="row">
+                <div id="playField" class="col-xs-offset-5 col-xs-7">
+                    
+                </div>
             </div>
         </div>
     </form>

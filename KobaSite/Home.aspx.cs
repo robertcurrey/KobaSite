@@ -36,7 +36,8 @@ namespace KobaSite
         protected void btnPlay_Click(object sender, EventArgs e)
         {
             string radioName = Session["SelectedRadio"].ToString();
-            bgVidLink.Src = objDBM.LinkPicker(radioName);
+            string station = radioName;
+            bgVidLink.Src = objDBM.LinkPicker(station);
             videoBG.Visible = true;
         }
 

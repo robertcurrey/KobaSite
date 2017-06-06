@@ -21,6 +21,8 @@
                     <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
+        
 
         <div class="container">
             <div id="radioPanel" class="row">

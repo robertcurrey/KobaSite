@@ -1,5 +1,5 @@
 ﻿* {
-    box-sizing: border-box;
+    box-sizing:inherit;
 }
 
 .video-background {
@@ -14,12 +14,14 @@
 
     .video-foreground,
     .video-background iframe {
-        position:absolute;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         pointer-events: none;
+        -webkit-filter: blur(8px);
+        filter: blur(8px);
     }
 
 #vidtop-content {
@@ -83,5 +85,9 @@
     .vid-info .acronym {
         display: none;
     }
+}
+
+#radioPanel{
+    margin-top:50px;
 }
 

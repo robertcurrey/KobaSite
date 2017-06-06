@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="Content/LoginCSS.css" rel="stylesheet" />
+    <link href="Content/LoginCSS.css" rel="stylesheet" type="text/css"/>
     <link href="Content/parallax.css" rel="stylesheet" />
     <link href="Content/VideoBG.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -31,7 +31,7 @@
             <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
         </div>
 
-        <div id="MasterLogin" class="jumbotron edgeRounder" runat="server">
+        <div id="MasterLogin" class="jumbotron" runat="server">
             <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">

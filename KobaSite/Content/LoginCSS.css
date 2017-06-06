@@ -2,6 +2,11 @@
     height: auto;
     background-image: url("KobaSiteLoginWallpaper.png")
 }
+.navStuff{
+    
+    padding:20px;
+}
+
 .pageBackground {
     
     text-align: center;

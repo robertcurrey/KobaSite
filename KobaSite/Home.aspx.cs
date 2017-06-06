@@ -25,14 +25,6 @@ namespace KobaSite
             }
         }
 
-        
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            Session.Clear();
-            Response.Redirect("Welcome.aspx");
-        }
-
         protected void btnRadio1_Click(object sender, EventArgs e)
         {
             
@@ -46,6 +38,13 @@ namespace KobaSite
             string radioName = Session["SelectedRadio"].ToString();
             bgVidLink.Src = objDBM.LinkPicker(radioName);
             videoBG.Visible = true;
+        }
+
+        protected void btnRadio2_Click(object sender, EventArgs e)
+        {
+            lblRadioDescription.Text = "Get the party started with the hottest remixes of the best music of the year.";
+            descriptionField.Visible = true;
+            Session["SelectedRadio"] = btnRadio2.Text;
         }
     }
 }

@@ -38,10 +38,10 @@
             <div id="divLogin" class="text-center" runat="server">
 
                 <div class="lblWelcome text-center">
-                    <asp:Label ID="lblEnterAccount" runat="server" Text="Please enter your email address, and we will send you a temporary password to log in with." Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                    <asp:Label ID="lblEnterAccount" runat="server" Text="Please enter your email address, and we will send you a temporary password to log in with." Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                 </div>
 
-                <asp:Label ID="lblUsername" runat="server" Text="Email: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px"></asp:Label>
+                <asp:Label ID="lblUsername" runat="server" Text="Email: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px" ForeColor="White"></asp:Label>
                 <asp:TextBox ID="txtUsername" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="255" placeholder="Enter your email address..." TextMode="Email" required="true"></asp:TextBox>
                 <br />
                 <br />

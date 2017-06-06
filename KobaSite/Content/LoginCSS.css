@@ -38,9 +38,11 @@
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px black;
 }
 .stationButtons {
-    background-color:darkslategrey;
+    background-color: darkslategrey;
     border-radius: 4px;
     color: white;
     padding: 15px 32px;
@@ -48,6 +50,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px black;
 }
 
 .createUserBtn {
@@ -59,4 +63,12 @@
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+}
+
+.greetingBG {
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
 }

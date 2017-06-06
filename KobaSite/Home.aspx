@@ -14,9 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-    
-
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
         <div class="bs-example bs-navbar-top-example navStuff" data-example-id="navbar-fixed-to-top">
@@ -35,8 +32,23 @@
             </nav>
         </div>
 
+        <div class="container">
+            <div id="welcomePanel" class="row greetingBG">
+                <div id="greeting" class="text-center col-xs-12">
+                    <br />
+                    <br />
+                    <asp:Label ID="lblGreeting" runat="server" Text="Welcome to Koba Radio" Font-Names="Yu Gothic UI Light" Font-Size="XX-Large" ForeColor="White"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="lblSubgreeting" runat="server" Text="Let's listen to some music." Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Image ID="kobaLogo" runat="server" imageurl="Content/kobaLogo.png" Height="100" Width="100"/>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid">
-            
             <div id="radioPanel" class="row">
                 <asp:UpdatePanel ID="UpdatePanel6" runat="server">
                     <ContentTemplate>
@@ -55,7 +67,7 @@
 
                 <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div id="radioList" runat="server" class="jumbotron col-xs-offset-1 col-xs-3" visible="false">
+                        <div id="radioList" runat="server" class="jumbotron col-xs-offset-1 col-xs-4" visible="false">
                             <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
                                 <br />
                                 <br />
@@ -75,6 +87,9 @@
                                         <asp:Button ID="btnRadio1" class="stationButtons" runat="server" Text="Nourish" OnClick="btnRadio1_Click" />
                                         <br />
                                         <br />
+                                        <asp:Button ID="btnChillhopCafe" class="stationButtons" runat="server" Text="Chillhop Cafe" OnClick="btnChillhopCafe_Click"/>
+                                        <br />
+                                        <br />
                                     </ContentTemplate>
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="btnLoFi" EventName="Click" />
@@ -92,7 +107,7 @@
 
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div id="descriptionField" runat="server" class="jumbotron col-xs-offset-1 col-xs-4" visible="false">
+                        <div id="descriptionField" runat="server" class="jumbotron col-xs-offset-1 col-xs-3" visible="false">
                             <asp:Label ID="lblDescription" runat="server" Text="Description:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
                             <br />
                             <br />
@@ -109,6 +124,7 @@
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btnRadio1" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnRadio2" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnChillhopCafe" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
             </div>
@@ -119,7 +135,7 @@
                 <div id="videoBG" runat="server" visible="false">
                     <div class="video-background">
                         <div class="video-foreground">
-                            <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen="true"></iframe>
                         </div>
                     </div>
                 </div>

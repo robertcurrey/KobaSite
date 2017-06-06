@@ -19,7 +19,6 @@ namespace KobaSite
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if(Session["UserOnline"] == null)
             {
                 Response.Redirect("Welcome.aspx");
@@ -60,6 +59,13 @@ namespace KobaSite
             radioList.Visible = true;
             edmRadioList.Visible = false;
             lofiRadioList.Visible = true;
+        }
+
+        protected void btnChillhopCafe_Click(object sender, EventArgs e)
+        {
+            lblRadioDescription.Text = "Relax with some of the best jazzy instrumental hip hop on the scene.";
+            descriptionField.Visible = true;
+            Session["SelectedRadio"] = btnChillhopCafe.Text;
         }
     }
 }

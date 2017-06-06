@@ -83,6 +83,7 @@
     <Content Include="CreateAccount.aspx" />
     <Content Include="Content\Global.asax" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="Content\kobaLogo.png" />
     <Content Include="Scripts\FormUpdate.js" />
     <Content Include="Home.aspx" />
     <Content Include="packages.config" />

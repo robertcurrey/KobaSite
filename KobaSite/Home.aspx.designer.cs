@@ -31,6 +31,33 @@ namespace KobaSite {
         protected global::System.Web.UI.ScriptManager sm;
         
         /// <summary>
+        /// lblGreeting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGreeting;
+        
+        /// <summary>
+        /// lblSubgreeting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSubgreeting;
+        
+        /// <summary>
+        /// kobaLogo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image kobaLogo;
+        
+        /// <summary>
         /// UpdatePanel6 control.
         /// </summary>
         /// <remarks>
@@ -146,6 +173,15 @@ namespace KobaSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRadio1;
+        
+        /// <summary>
+        /// btnChillhopCafe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnChillhopCafe;
         
         /// <summary>
         /// UpdatePanel2 control.

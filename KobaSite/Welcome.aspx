@@ -29,7 +29,7 @@
             </div>
         </div> -->
 
-        <div class="lblWelcome text-center">
+        <div class="lblWelcome text-center jumbotron">
             <asp:Label ID="lblWelcome" runat="server" Text="Welcome" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
         </div>
 
@@ -38,14 +38,14 @@
             <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">
-                        <asp:Label ID="lblPleaseLogin" runat="server" Text="Please Login" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="lblPleaseLogin" runat="server" Text="Please Login" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                     </div>
                     
-                    <asp:Label ID="lblUsername" runat="server" Text="Email: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px"></asp:Label>
+                    <asp:Label ID="lblUsername" runat="server" Text="Email: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px" ForeColor="White"></asp:Label>
                     <asp:TextBox ID="txtUsername" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="255" placeholder="Enter your email address..." TextMode="Email"></asp:TextBox>
                     <br />
                     <br />
-                    <asp:Label ID="lblPassword" runat="server" Text="Password: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px"></asp:Label>
+                    <asp:Label ID="lblPassword" runat="server" Text="Password: " Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="100px" ForeColor="White"></asp:Label>
                     <asp:TextBox ID="txtPassword" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="50" placeholder="Enter your password..." type="password"></asp:TextBox>
                     <br />
                     <br />

@@ -15,14 +15,12 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="jumbotron">
+        
             <div class="video-background">
                 <div class="video-foreground">
                     <iframe id="bgVidLink" runat="server" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-        
 
         <div class="container">
             <div id="radioPanel" class="row">
@@ -40,7 +38,7 @@
 
         <br />
         <br />
-        <asp:Button ID="btnLogout" class="loginButtons text-center" Font-Names="Yu Gothic UI Light" Font-Size="Medium" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+        <asp:Button ID="btnLogout" class="loginButtons" Font-Names="Yu Gothic UI Light" Font-Size="Medium" runat="server" Text="Logout" OnClick="btnLogout_Click" />
 
     </form>
 </body>

@@ -15,6 +15,7 @@ namespace KobaSite
     public partial class Home : System.Web.UI.Page
     {
         DBManager objDBM = new DBManager();
+        string currentGenre;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,8 +37,7 @@ namespace KobaSite
         protected void btnPlay_Click(object sender, EventArgs e)
         {
             string radioName = Session["SelectedRadio"].ToString();
-            string station = radioName;
-            bgVidLink.Src = objDBM.LinkPicker(station);
+            bgVidLink.Src = objDBM.LinkPicker(radioName);
             videoBG.Visible = true;
         }
 
@@ -46,6 +46,20 @@ namespace KobaSite
             lblRadioDescription.Text = "Get the party started with the hottest remixes of the best music of the year.";
             descriptionField.Visible = true;
             Session["SelectedRadio"] = btnRadio2.Text;
+        }
+
+        protected void btnEDM_Click(object sender, EventArgs e)
+        {
+            radioList.Visible = true;
+            edmRadioList.Visible = true;
+            lofiRadioList.Visible = false;
+        }
+
+        protected void btnLoFi_Click(object sender, EventArgs e)
+        {
+            radioList.Visible = true;
+            edmRadioList.Visible = false;
+            lofiRadioList.Visible = true;
         }
     }
 }

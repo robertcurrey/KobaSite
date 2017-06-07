@@ -4965,7 +4965,6 @@ a.badge:focus {
     color: inherit;
     background-color: #eee;
     border-radius: 10px;
-    opacity: 0.85;
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.5);
 }

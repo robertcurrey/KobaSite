@@ -82,7 +82,7 @@ namespace KobaSite {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEDM;
+        protected global::System.Web.UI.WebControls.ImageButton btnEDM;
         
         /// <summary>
         /// btnLoFi control.
@@ -91,7 +91,7 @@ namespace KobaSite {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLoFi;
+        protected global::System.Web.UI.WebControls.ImageButton btnLoFi;
         
         /// <summary>
         /// UpdatePanel5 control.
@@ -146,6 +146,24 @@ namespace KobaSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRadio2;
+        
+        /// <summary>
+        /// btnStaySee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStaySee;
+        
+        /// <summary>
+        /// btnPixl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPixl;
         
         /// <summary>
         /// lofiRadioList control.
@@ -235,7 +253,7 @@ namespace KobaSite {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPlay;
+        protected global::System.Web.UI.WebControls.ImageButton btnPlay;
         
         /// <summary>
         /// UpdatePanel3 control.

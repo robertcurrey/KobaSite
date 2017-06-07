@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KobaSite.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KobaSite.Home" MaintainScrollPositionOnPostback="False"%>
 
 <!DOCTYPE html>
 
@@ -60,6 +60,7 @@
                             <br />
                             <br />
                             <asp:ImageButton ID="btnEDM" runat="server" Text="Dance/EDM" Width="175" Height="175" ImageUrl="Genres/edm.png" OnClick="btnEDM_Click1" />
+                            &emsp;<asp:ImageButton ID="btnSoundtrack" runat="server" Text="Soundtrack" Width="175" Height="175" ImageUrl="Genres/.png" OnClick="btnSoundtrack_Click" />
                             <br />
                             <br />
                             <asp:ImageButton ID="btnLoFi" runat="server" Text="LoFi" Width="175" Height="175" ImageUrl="Genres/lofi.png" OnClick="btnLoFi_Click1" />
@@ -107,11 +108,25 @@
                                     </Triggers>
                                 </asp:UpdatePanel>
                             </div>
+                            
+                            <div id="soundtrackRadioList" runat="server" visible="false">
+                                <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Conditional">
+                                    <ContentTemplate>
+                                        <asp:Button ID="btnPandora" class="stationButtons" runat="server" Text="Pandora" OnClick="btnPandora_Click" />
+                                        <br />
+                                        <br />
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="btnSoundtrack" EventName="Click" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
                         </div>
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btnEDM" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnLoFi" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnSoundtrack" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
             </div>
@@ -123,14 +138,13 @@
                             <asp:Label ID="lblDescription" runat="server" Text="Description:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
-                            <asp:Label ID="lblRadioDescription" runat="server" ForeColor="White" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="Large"></asp:Label>
-                            <br />
-                            <br />
                             <asp:UpdatePanel ID="UpdatePanel4" runat="server">
                                 <ContentTemplate>
                                     <asp:ImageButton ID="btnPlay" runat="server" Text="Play" ImageUrl="Other Buttons/playButtonImg.png" Width="100" Height="100" OnClick="btnPlay_Click1" />
                                 </ContentTemplate>
                             </asp:UpdatePanel>
+                            <br />
+                            <asp:Label ID="lblRadioDescription" runat="server" ForeColor="White" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="Large"></asp:Label>
                         </div>
                     </ContentTemplate>
                     <Triggers>
@@ -139,6 +153,7 @@
                         <asp:AsyncPostBackTrigger ControlID="btnChillhopCafe" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnStaySee" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnPixl" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnPandora" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
             </div>
@@ -158,7 +173,7 @@
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="btnPlay" EventName="Click" />
             </Triggers>
-        </asp:UpdatePanel>
+            </asp:UpdatePanel>
         </div>
     </form>
 </body>

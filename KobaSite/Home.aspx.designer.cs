@@ -85,6 +85,15 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.ImageButton btnEDM;
         
         /// <summary>
+        /// btnSoundtrack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnSoundtrack;
+        
+        /// <summary>
         /// btnLoFi control.
         /// </summary>
         /// <remarks>
@@ -202,6 +211,33 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.Button btnChillhopCafe;
         
         /// <summary>
+        /// soundtrackRadioList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl soundtrackRadioList;
+        
+        /// <summary>
+        /// UpdatePanel8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel8;
+        
+        /// <summary>
+        /// btnPandora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPandora;
+        
+        /// <summary>
         /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
@@ -229,15 +265,6 @@ namespace KobaSite {
         protected global::System.Web.UI.WebControls.Label lblDescription;
         
         /// <summary>
-        /// lblRadioDescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRadioDescription;
-        
-        /// <summary>
         /// UpdatePanel4 control.
         /// </summary>
         /// <remarks>
@@ -254,6 +281,15 @@ namespace KobaSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnPlay;
+        
+        /// <summary>
+        /// lblRadioDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRadioDescription;
         
         /// <summary>
         /// backgroundVideo control.

@@ -53,7 +53,7 @@
                 <asp:UpdatePanel ID="UpdatePanel6" runat="server">
                     <ContentTemplate>
                         <div id="genrePanel" class="jumbotron text-left col-xs-3">
-                            <asp:Label ID="lblGenre" runat="server" Text="Select a Genre:" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                            <asp:Label ID="lblGenre" runat="server" Text="Select a Genre:" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
                             <asp:Button ID="btnEDM" CssClass="stationButtons" runat="server" Text="Dance/EDM" OnClick="btnEDM_Click"/>
@@ -68,7 +68,7 @@
                 <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <div id="radioList" runat="server" class="jumbotron col-xs-offset-1 col-xs-4" visible="false">
-                            <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                            <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                                 <br />
                                 <br />
                             <div id="edmRadioList" runat="server" visible="false">
@@ -108,10 +108,10 @@
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <div id="descriptionField" runat="server" class="jumbotron col-xs-offset-1 col-xs-3" visible="false">
-                            <asp:Label ID="lblDescription" runat="server" Text="Description:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                            <asp:Label ID="lblDescription" runat="server" Text="Description:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
-                            <asp:Label ID="lblRadioDescription" runat="server"></asp:Label>
+                            <asp:Label ID="lblRadioDescription" runat="server" ForeColor="White" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="Large"></asp:Label>
                             <br />
                             <br />
                             <asp:UpdatePanel ID="UpdatePanel4" runat="server">

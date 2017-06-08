@@ -60,7 +60,7 @@
                             <br />
                             <br />
                             <asp:ImageButton ID="btnEDM" runat="server" Text="Dance/EDM" Width="175" Height="175" ImageUrl="Genres/edm.png" OnClick="btnEDM_Click1" />
-                            &emsp;<asp:ImageButton ID="btnSoundtrack" runat="server" Text="Soundtrack" Width="175" Height="175" ImageUrl="Genres/.png" OnClick="btnSoundtrack_Click" />
+                            &emsp;&emsp;<asp:ImageButton ID="btnSoundtrack" runat="server" Text="Soundtrack" Width="175" Height="175" ImageUrl="Genres/soundtrack.png" OnClick="btnSoundtrack_Click" />
                             <br />
                             <br />
                             <asp:ImageButton ID="btnLoFi" runat="server" Text="LoFi" Width="175" Height="175" ImageUrl="Genres/lofi.png" OnClick="btnLoFi_Click1" />
@@ -112,9 +112,13 @@
                             <div id="soundtrackRadioList" runat="server" visible="false">
                                 <asp:UpdatePanel ID="UpdatePanel8" runat="server" UpdateMode="Conditional">
                                     <ContentTemplate>
-                                        <asp:Button ID="btnPandora" class="stationButtons" runat="server" Text="Pandora" OnClick="btnPandora_Click" />
+                                        <asp:Button ID="btnSoulCandle" class="stationButtons" runat="server" Text="Soul Candle" OnClick="btnSoulCandle_Click" />
                                         <br />
                                         <br />
+                                        <asp:Button ID="btnEpicMusic" class="stationButtons" runat="server" Text="Epic Music" OnClick="btnEpicMusic_Click" />
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="btnFalloutRadio" class="stationButtons" runat="server" Text="Fallout Radio" OnClick="btnFalloutRadio_Click" />
                                     </ContentTemplate>
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="btnSoundtrack" EventName="Click" />
@@ -153,7 +157,9 @@
                         <asp:AsyncPostBackTrigger ControlID="btnChillhopCafe" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnStaySee" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnPixl" EventName="Click" />
-                        <asp:AsyncPostBackTrigger ControlID="btnPandora" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnSoulCandle" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnEpicMusic" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnFalloutRadio" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
             </div>

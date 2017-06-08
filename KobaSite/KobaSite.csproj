@@ -147,6 +147,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Genres\soundtrack.png" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />
   </ItemGroup>

@@ -75,6 +75,7 @@ namespace KobaSite
             radioList.Visible = true;
             edmRadioList.Visible = true;
             lofiRadioList.Visible = false;
+            soundtrackRadioList.Visible = false;
             
         }
 
@@ -91,7 +92,7 @@ namespace KobaSite
             radioList.Visible = true;   
             edmRadioList.Visible = false;
             lofiRadioList.Visible = true;
-            
+            soundtrackRadioList.Visible = false;
         }
 
         protected void btnSoundtrack_Click(object sender, ImageClickEventArgs e)
@@ -102,12 +103,28 @@ namespace KobaSite
             soundtrackRadioList.Visible = true;
         }
 
-        protected void btnPandora_Click(object sender, EventArgs e)
+        protected void btnSoulCandle_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnPandora.Text);
+            lblDescription.Text = ("Description: " + btnSoulCandle.Text);
+            lblRadioDescription.Text = "Ignite your soul and relax with beautiful and elegant piano pieces that will sync your mind to the tranquility of the seas.";
+            descriptionField.Visible = true;
+            Session["SelectedRadio"] = btnSoulCandle.Text;
+        }
+
+        protected void btnEpicMusic_Click(object sender, EventArgs e)
+        {
+            lblDescription.Text = ("Description: " + btnEpicMusic.Text);
             lblRadioDescription.Text = "Some of the most powerful and epic soundtracks this side of the millennium.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnPandora.Text;
+            Session["SelectedRadio"] = btnEpicMusic.Text;
+        }
+
+        protected void btnFalloutRadio_Click(object sender, EventArgs e)
+        {
+            lblDescription.Text = ("Description: " + btnFalloutRadio.Text);
+            lblRadioDescription.Text = "Experience or relive the evolution of the Wastelands of the popular video game franchise, 'Fallout'.";
+            descriptionField.Visible = true;
+            Session["SelectedRadio"] = btnFalloutRadio.Text;
         }
     }
 }

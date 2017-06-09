@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KobaSite.Home" MaintainScrollPositionOnPostback="False"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KobaSite.Home"%>
 
 <!DOCTYPE html>
 
@@ -15,6 +15,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <header>
+        
+    </header>
+
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
         <div class="bs-example bs-navbar-top-example navStuff" data-example-id="navbar-fixed-to-top">
@@ -59,7 +63,7 @@
                             <asp:Label ID="lblGenre" runat="server" Text="Select a Genre:" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
-                            <asp:ImageButton ID="btnEDM" runat="server" Text="Dance/EDM" Width="175" Height="175" ImageUrl="Genres/edm.png" OnClick="btnEDM_Click1" />
+                            <asp:ImageButton ID="btnEDM" runat="server" Text="Dance/EDM" Width="175" Height="175" ImageUrl="Genres/edm.png" OnClick="btnEDM_Click"/>
                             &emsp;&emsp;<asp:ImageButton ID="btnSoundtrack" runat="server" Text="Soundtrack" Width="175" Height="175" ImageUrl="Genres/soundtrack.png" OnClick="btnSoundtrack_Click" />
                             <br />
                             <br />
@@ -69,9 +73,9 @@
                 </asp:UpdatePanel>
             </div>
             <div id="stationPanel" class="row">
-                <asp:UpdatePanel ID="UpdatePanel5" runat="server" UpdateMode="Conditional">
+                <asp:UpdatePanel ID="UpdatePanel5" UpdateMode="Conditional" runat="server">
                     <ContentTemplate>
-                        <div id="radioList" runat="server" class="jumbotron col-xs-12" visible="false">
+                        <div id="radioList" runat="server" visible="true" class="jumbotron col-xs-12">
                             <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />

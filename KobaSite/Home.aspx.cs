@@ -43,6 +43,8 @@ namespace KobaSite
             bgVidLink.Src = objDBM.LinkPicker(radioName);
             videoBG.Visible = true;
 
+            lblNowPlaying.Text = ("Now Playing: " + radioName + " Radio");
+            nowPlayingField.Visible = true;
         }
         //--------------------------------------------------------------------------
 
@@ -147,8 +149,7 @@ namespace KobaSite
             Session["SelectedRadio"] = btnFalloutRadio.Text;
             DescriptionFieldScrollToBottom();
         }
-
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        
+
     }
 }

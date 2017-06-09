@@ -75,7 +75,7 @@
             <div id="stationPanel" class="row">
                 <asp:UpdatePanel ID="UpdatePanel5" UpdateMode="Conditional" runat="server">
                     <ContentTemplate>
-                        <div id="radioList" runat="server" visible="true" class="jumbotron col-xs-12">
+                        <div id="radioList" runat="server" visible="false" class="jumbotron col-xs-12">
                             <asp:Label ID="lblStationBox" runat="server" Text="Select a Radio Station:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
@@ -122,7 +122,7 @@
                                         <asp:Button ID="btnEpicMusic" class="stationButtons" runat="server" Text="Epic Music" OnClick="btnEpicMusic_Click" />
                                         <br />
                                         <br />
-                                        <asp:Button ID="btnFalloutRadio" class="stationButtons" runat="server" Text="Fallout Radio" OnClick="btnFalloutRadio_Click" />
+                                        <asp:Button ID="btnFalloutRadio" class="stationButtons" runat="server" Text="Fallout" OnClick="btnFalloutRadio_Click" />
                                     </ContentTemplate>
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="btnSoundtrack" EventName="Click" />
@@ -142,7 +142,7 @@
             <div id="descriptionPanel" class="row">
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <div id="descriptionField" runat="server" class="jumbotron col-xs-12" visible="false">
+                        <div id="descriptionField" runat="server" class="jumbotron col-xs-5" visible="false">
                             <asp:Label ID="lblDescription" runat="server" Text="Description:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
@@ -166,16 +166,31 @@
                         <asp:AsyncPostBackTrigger ControlID="btnFalloutRadio" EventName="Click" />
                     </Triggers>
                 </asp:UpdatePanel>
+
+                <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <div id="nowPlayingField" runat="server" class="jumbotron col-xs-offset-2 col-xs-5" visible="false">
+                            <asp:Label ID="lblNowPlaying" runat="server" Text="Now Playing:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
+                            <br />
+                            <br />
+                        </div>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btnPlay" EventName="Click" />
+                    </Triggers>
+                </asp:UpdatePanel>
             </div>
         </div>
 
-        <div id="backgroundVideo" class="container" runat="server">
-            <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
+        <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
-                <div id="videoBG" runat="server" visible="false">
-                    <div class="video-background">
-                        <div class="video-foreground">
-                            <iframe id="bgVidLink" runat="server" width="1920" height="1080"></iframe>
+                <div id="backgroundVideo" class="container" runat="server">
+
+                    <div id="videoBG" runat="server" visible="false">
+                        <div class="video-background">
+                            <div class="video-foreground">
+                                <iframe id="bgVidLink" runat="server" width="1920" height="1080"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,8 +198,7 @@
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="btnPlay" EventName="Click" />
             </Triggers>
-            </asp:UpdatePanel>
-        </div>
+        </asp:UpdatePanel>
     </form>
 </body>
 </html>

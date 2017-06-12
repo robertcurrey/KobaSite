@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Collections;
 using System.Net.Mail;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
+using System.Globalization;
 
 namespace KobaSite
 {
@@ -21,6 +24,7 @@ namespace KobaSite
         string email;
         string password;
         string password2;
+        string serializedPassword;
         string activatedFlag = "False";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -65,8 +69,19 @@ namespace KobaSite
             {
                 if (password == password2)
                 {
+                    //SERIALIZE THE PASSWORD
+                    /*SerializePassword objPassword = new SerializePassword();
+                    objPassword.password = password;
+                    StringWriter writer = new StringWriter(CultureInfo.InvariantCulture);
+                    XmlSerializer serializer = new XmlSerializer(typeof(SerializePassword));
+                    serializer.Serialize(writer, objPassword);
+                    serializedPassword = writer.ToString();*/
+
+                    byte[] encryptedPassword = System.Text.Encoding.ASCII.GetBytes(password);
+                    encryptedPassword = new System.Security.Cryptography.SHA256Managed().ComputeHash(encryptedPassword);
+
                     //Create Account
-                    objDBM.CreateAccount(email, password);
+                    objDBM.CreateAccount(email, encryptedPassword);
 
                     //Send Confirmation Email
                     objEmail.SendEmailConfirmation(email, activatedFlag);

@@ -56,14 +56,21 @@ namespace KobaSite
             {
                 //Account exists!
 
-                //UPDATE USER PASSWORD TO TEMPORARY PASSWORD, SET USER FAKEPASSWORDACTIVEFLAG = TRUE
-                string newPassword1 = "x45vf";
+                //Generate random string
+                string path = Path.GetRandomFileName();
+                path = path.Replace(".", ""); // Remove period.
+
+                //encrypt string into temp password
+                byte[] encryptedPassword = System.Text.Encoding.ASCII.GetBytes(path);
+                encryptedPassword = new System.Security.Cryptography.SHA256Managed().ComputeHash(encryptedPassword);
+
                 string fakePasswordActiveFlag = "True";
 
-                //Send email with temporary fake password
-                objEmail.SendTemporaryPasswordEmail(email, newPassword1);
+                //Send email with temporary fake password (unencrypted)
+                objEmail.SendTemporaryPasswordEmail(email, path);
 
-                objDBM.SetNewPassword(email, newPassword1, fakePasswordActiveFlag);
+                //Update database with encrypted temp password and fakePasswordFlag = True
+                objDBM.SetNewPassword(email, encryptedPassword, fakePasswordActiveFlag);
 
                 //Redirect to login
                 Response.Redirect("Welcome.aspx");

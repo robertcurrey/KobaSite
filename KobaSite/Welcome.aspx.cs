@@ -26,16 +26,28 @@ namespace KobaSite
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string email = txtUsername.Text;
+
             string password = txtPassword.Text;
 
-            DataSet dbUserPass = objDBM.AuthenticateUser(email, password);
+            //Gets password hash from entered password
+            byte[] encryptedPassword = System.Text.Encoding.ASCII.GetBytes(password);
+            encryptedPassword = new System.Security.Cryptography.SHA256Managed().ComputeHash(encryptedPassword);
+            String enteredPassHash = System.Text.Encoding.ASCII.GetString(encryptedPassword);
+
+            DataSet dbUserPass = objDBM.AuthenticateUser(email, encryptedPassword);
 
             foreach (DataTable table in dbUserPass.Tables)
             {
                 foreach(DataRow dr in table.Rows)
                 {
                     string dbEmail = dbUserPass.Tables[0].Rows[0]["Email Address"].ToString();
-                    string dbPass = dbUserPass.Tables[0].Rows[0]["Password"].ToString();
+
+                    //Gets stored password hash from database
+                    byte[] dbPass = (byte[])(dbUserPass.Tables[0].Rows[0]["Password"]);
+                    String storedPassHash = System.Text.Encoding.ASCII.GetString(dbPass);
+                    //Converts hash to string
+                    //String passHash = System.Text.Encoding.ASCII.GetString(dbPass);
+
                     string dbActivationFlag = (dbUserPass.Tables[0].Rows[0]["IsActivated"]).ToString();
                     string dbFakePasswordActiveFlag = (dbUserPass.Tables[0].Rows[0]["FakePasswordActiveFlag"]).ToString();
 
@@ -48,7 +60,8 @@ namespace KobaSite
                         accountExistsFlag = true;
                         CheckFlag();
 
-                        if (password == dbPass)
+                        //compares stored password hash with entered password hash
+                        if (enteredPassHash == storedPassHash)
                         {
                             if (dbActivationFlag == "False")
                             {

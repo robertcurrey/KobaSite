@@ -43,8 +43,12 @@ namespace KobaSite
             {
                 string fakePasswordActiveFlag = "False";
 
+                //Encrypt password
+                byte[] encryptedPassword = System.Text.Encoding.ASCII.GetBytes(newPassword1);
+                encryptedPassword = new System.Security.Cryptography.SHA256Managed().ComputeHash(encryptedPassword);
+
                 //UPDATE PASSWORD FOR USER, UPDATE FAKEPASSWORDACTIVEFLAG = FALSE
-                objDBM.SetNewPassword(email, newPassword1, fakePasswordActiveFlag);
+                objDBM.SetNewPassword(email, encryptedPassword, fakePasswordActiveFlag);
 
                 //Send Password Change Confirmation Email
                 objEmail.SendPasswordChangeConfirmation(email);

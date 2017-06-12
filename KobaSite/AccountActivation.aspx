@@ -34,14 +34,14 @@
                <asp:Label ID="lblActivate" runat="server" Text="Activate Account" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
            </div>
 
-            <div id="MasterLogin" class="jumbotron" runat="server">
+            <div id="MasterLogin" class="jumbotron edgeRounder" runat="server">
                 <div id="divLogin" class="text-center" runat="server">
 
                     <div class="lblWelcome text-center">
-                        <asp:Label ID="lblPleaseEnterCode" runat="server" Text="Almost there! Just activate your account using the code in the email we sent you." Font-Names="Yu Gothic UI Light" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="lblPleaseEnterCode" runat="server" Text="Almost there! Just activate your account using the code in the email we sent you." Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                     </div>
                     
-                    <asp:Label ID="lblActivationCode" runat="server" Text="Activation Code:" Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="150px"></asp:Label>
+                    <asp:Label ID="lblActivationCode" runat="server" Text="Activation Code:" Font-Names="Yu Gothic UI Light" Font-Size="Large" Width="150px" ForeColor="White"></asp:Label>
                     <asp:TextBox ID="txtActivationCode" runat="server" Height="60px" Width="302px" CssClass="textBoxes" MaxLength="255" placeholder="Enter your activation code..." TextMode="Number" required="true"></asp:TextBox>
                     <br />
                     <br />

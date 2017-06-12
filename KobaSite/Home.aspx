@@ -170,9 +170,13 @@
                 <asp:UpdatePanel ID="UpdatePanel9" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <div id="nowPlayingField" runat="server" class="jumbotron col-xs-offset-2 col-xs-5" visible="false">
-                            <asp:Label ID="lblNowPlaying" runat="server" Text="Now Playing:" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
+                            <asp:Label ID="lblNowPlaying" runat="server" CssClass="text-left" Font-Names="Yu Gothic UI Light" Font-Size="X-Large" ForeColor="White"></asp:Label>
                             <br />
                             <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Button ID="btnReportLink" class="btn-danger" runat="server" Text="Nothing Playing?" Width="199px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="40px" OnClick="btnReportLink_Click" />
                         </div>
                     </ContentTemplate>
                     <Triggers>

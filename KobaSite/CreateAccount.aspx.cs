@@ -69,14 +69,7 @@ namespace KobaSite
             {
                 if (password == password2)
                 {
-                    //SERIALIZE THE PASSWORD
-                    /*SerializePassword objPassword = new SerializePassword();
-                    objPassword.password = password;
-                    StringWriter writer = new StringWriter(CultureInfo.InvariantCulture);
-                    XmlSerializer serializer = new XmlSerializer(typeof(SerializePassword));
-                    serializer.Serialize(writer, objPassword);
-                    serializedPassword = writer.ToString();*/
-
+                    //Encrypt password for database storage
                     byte[] encryptedPassword = System.Text.Encoding.ASCII.GetBytes(password);
                     encryptedPassword = new System.Security.Cryptography.SHA256Managed().ComputeHash(encryptedPassword);
 

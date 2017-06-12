@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Collections;
 using System.Net.Mail;
+using System.Timers;
 
 namespace KobaSite
 {
@@ -149,7 +150,16 @@ namespace KobaSite
             Session["SelectedRadio"] = btnFalloutRadio.Text;
             DescriptionFieldScrollToBottom();
         }
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        protected void btnReportLink_Click(object sender, EventArgs e)
+        {
+            string currentRadio = Session["SelectedRadio"].ToString();
+
+            EmailModules objEmail = new EmailModules();
+            objEmail.BrokenLinkReport(currentRadio);
+
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "ReportAlert", "alert('Thanks for telling us. We'll have that station back online soon!');", true);
+        }
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 }

@@ -211,22 +211,22 @@ namespace KobaSite {
         protected global::System.Web.UI.UpdatePanel UpdatePanel7;
         
         /// <summary>
-        /// btnRadio1 control.
+        /// Nourish control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRadio1;
+        protected global::System.Web.UI.WebControls.ImageButton Nourish;
         
         /// <summary>
-        /// btnChillhopCafe control.
+        /// ChillhopCafe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnChillhopCafe;
+        protected global::System.Web.UI.WebControls.ImageButton ChillhopCafe;
         
         /// <summary>
         /// soundtrackRadioList control.
@@ -247,31 +247,31 @@ namespace KobaSite {
         protected global::System.Web.UI.UpdatePanel UpdatePanel8;
         
         /// <summary>
-        /// btnSoulCandle control.
+        /// SoulCandle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSoulCandle;
+        protected global::System.Web.UI.WebControls.ImageButton SoulCandle;
         
         /// <summary>
-        /// btnEpicMusic control.
+        /// EpicMusic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEpicMusic;
+        protected global::System.Web.UI.WebControls.ImageButton EpicMusic;
         
         /// <summary>
-        /// btnFalloutRadio control.
+        /// Fallout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFalloutRadio;
+        protected global::System.Web.UI.WebControls.ImageButton Fallout;
         
         /// <summary>
         /// descriptionPanel control.

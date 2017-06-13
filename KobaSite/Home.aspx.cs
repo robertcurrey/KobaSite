@@ -104,6 +104,30 @@ namespace KobaSite
             lofiRadioList.Visible = true;
             soundtrackRadioList.Visible = false;
             RadioListScrollToBottom();
+
+            foreach (DataTable table in allYTURLS.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    //get the next radio/link combo
+                    string dbRadio = (row["RadioName"]).ToString();
+                    string dbLinkExt = (row["ThumbnailExt"]).ToString();
+
+                    switch (dbRadio)
+                    {
+                        case "Nourish":
+                            {
+                                Nourish.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                break;
+                            }
+                        case "ChillhopCafe":
+                            {
+                                ChillhopCafe.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                break;
+                            }
+                    }
+                }
+            }
         }
 
         protected void btnSoundtrack_Click(object sender, ImageClickEventArgs e)
@@ -113,6 +137,35 @@ namespace KobaSite
             lofiRadioList.Visible = false;
             soundtrackRadioList.Visible = true;
             RadioListScrollToBottom();
+
+            foreach (DataTable table in allYTURLS.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    //get the next radio/link combo
+                    string dbRadio = (row["RadioName"]).ToString();
+                    string dbLinkExt = (row["ThumbnailExt"]).ToString();
+
+                    switch (dbRadio)
+                    {
+                        case "SoulCandle":
+                            {
+                                SoulCandle.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                break;
+                            }
+                        case "EpicMusic":
+                            {
+                                EpicMusic.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                break;
+                            }
+                        case "Fallout":
+                            {
+                                Fallout.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                break;
+                            }
+                    }
+                }
+            }
         }
         //----------------------------------------------------------------------------
 
@@ -120,10 +173,10 @@ namespace KobaSite
         //Nourish Button Click
         protected void btnRadio1_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnRadio1.Text);
+            lblDescription.Text = ("Description: Nourish Radio");
             lblRadioDescription.Text = "Kick back and chill with the best lo-fi tunes out there in this great big world.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnRadio1.Text;
+            Session["SelectedRadio"] = Nourish.ID;
             DescriptionFieldScrollToBottom();
         }
 
@@ -139,10 +192,10 @@ namespace KobaSite
 
         protected void btnChillhopCafe_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnChillhopCafe.Text);
+            lblDescription.Text = ("Description: Chillhop Cafe Radio");
             lblRadioDescription.Text = "Relax with some of the best jazzy instrumental hip hop on the scene.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnChillhopCafe.Text;
+            Session["SelectedRadio"] = ChillhopCafe.ID;
             DescriptionFieldScrollToBottom();
         }
 
@@ -166,28 +219,28 @@ namespace KobaSite
 
         protected void btnSoulCandle_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnSoulCandle.Text);
+            lblDescription.Text = ("Description: Soul Candle Radio");
             lblRadioDescription.Text = "Ignite your soul and relax with beautiful and elegant piano pieces that will sync your mind to the tranquility of the seas.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnSoulCandle.Text;
+            Session["SelectedRadio"] = SoulCandle.ID;
             DescriptionFieldScrollToBottom();
         }
 
         protected void btnEpicMusic_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnEpicMusic.Text);
+            lblDescription.Text = ("Description: Epic Music Radio");
             lblRadioDescription.Text = "Some of the most powerful and epic soundtracks this side of the millennium.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnEpicMusic.Text;
+            Session["SelectedRadio"] = EpicMusic.ID;
             DescriptionFieldScrollToBottom();
         }
 
         protected void btnFalloutRadio_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnFalloutRadio.Text);
+            lblDescription.Text = ("Description: Fallout Radio");
             lblRadioDescription.Text = "Experience or relive the evolution of the Wastelands of the popular video game franchise, 'Fallout'.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnFalloutRadio.Text;
+            Session["SelectedRadio"] = Fallout.ID;
             DescriptionFieldScrollToBottom();
         }
 

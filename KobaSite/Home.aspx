@@ -11,33 +11,34 @@
     <link href="Content/VideoBG.css" rel="stylesheet" />
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/DescriptionAnimation.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        
-    </header>
 
-    <form id="form1" runat="server">
-        <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
-        <div class="bs-example bs-navbar-top-example navStuff" data-example-id="navbar-fixed-to-top">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                        <a class="navbar-brand">Koba Radio</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">My Profile</a></li>
-                            <li><a href="Welcome.aspx">Logout</a></li>
-                        </ul>
-                    </div>
+    <form id="form1" runat="server">     
+        <!--NAVBAR-->
+        <header>
+            <nav id="navigation" class="navbar navbar-inverse navpad">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">
+                        <asp:Label ID="lblNavBrand" runat="server" Text="Koba Radio" Font-Names="Yu Gothic UI Light" Font-Size="15pt" ForeColor="White"></asp:Label></a>
                 </div>
-            </nav>
-        </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Welcome.aspx">
+                        <asp:Label ID="lblLogout" runat="server" Text="Logout" Font-Names="Yu Gothic UI Light" Font-Size="12pt" ForeColor="White"></asp:Label></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        
 
+        <asp:ScriptManager runat="server" ID="sm"></asp:ScriptManager>
         <div class="container">
             <div id="welcomePanel" class="row greetingBG">
                 <div id="greeting" class="text-center col-xs-12">
@@ -83,13 +84,11 @@
                             <div id="edmRadioList" runat="server" visible="false">
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                                     <ContentTemplate>
-                                        <asp:Button ID="btnRadio2" class="stationButtons" runat="server" Text="DJ JeNy" OnClick="btnRadio2_Click" />
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnStaySee" class="stationButtons" runat="server" Text="Stay See" OnClick="btnStaySee_Click" />
-                                        <br />
-                                        <br />
-                                        <asp:Button ID="btnPixl" class="stationButtons" runat="server" Text="Pixl" OnClick="btnPixl_Click" />
+                                        <asp:ImageButton ID="DJJeNy" runat="server" Width="320" Height="180" OnClick="btnRadio2_Click"/>
+                                        &emsp;&emsp;
+                                        <asp:ImageButton ID="StaySee" runat="server" Width="320" Height="180" OnClick="btnStaySee_Click"/>
+                                        &emsp;&emsp;
+                                        <asp:ImageButton ID="Pixl" runat="server" Width="320" Height="180" OnClick="btnPixl_Click"/>
                                     </ContentTemplate>
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="btnEDM" EventName="Click" />
@@ -139,7 +138,7 @@
                 </asp:UpdatePanel>
             </div>
 
-            <div id="descriptionPanel" class="row">
+            <div id="descriptionPanel" class="row" runat="server">
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
                         <div id="descriptionField" runat="server" class="jumbotron col-xs-5" visible="false">
@@ -157,10 +156,10 @@
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btnRadio1" EventName="Click" />
-                        <asp:AsyncPostBackTrigger ControlID="btnRadio2" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="DJJeNy" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnChillhopCafe" EventName="Click" />
-                        <asp:AsyncPostBackTrigger ControlID="btnStaySee" EventName="Click" />
-                        <asp:AsyncPostBackTrigger ControlID="btnPixl" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="StaySee" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="Pixl" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnSoulCandle" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnEpicMusic" EventName="Click" />
                         <asp:AsyncPostBackTrigger ControlID="btnFalloutRadio" EventName="Click" />
@@ -204,5 +203,32 @@
             </Triggers>
         </asp:UpdatePanel>
     </form>
+
+    <!--SCRIPTS-->
+    <!--Sticky Navbar-->
+    <script>
+        (function ($) {
+            "use strict";
+
+            var $navbar = $("#navbar"),
+                y_pos = $navbar.offset().top,
+                height = $navbar.height();
+
+            $(document).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+
+                if (scrollTop > y_pos + height) {
+                    $navbar.addClass("navbar-fixed").animate({
+                        top: 0
+                    });
+                } else if (scrollTop <= y_pos) {
+                    $navbar.removeClass("navbar-fixed").clearQueue().animate({
+                        top: "-48px"
+                    }, 0);
+                }
+            });
+
+        })(jQuery, undefined);
+    </script>
 </body>
 </html>

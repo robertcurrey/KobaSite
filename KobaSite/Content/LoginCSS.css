@@ -2,10 +2,6 @@
     height: auto;
     background-image: url("KobaSiteLoginWallpaper.png")
 }
-.navStuff{
-    
-    padding:20px;
-}
 
 .pageBackground {
     
@@ -74,4 +70,26 @@
     margin-bottom: 30px;
     margin-top:30px;
     padding:30px;
+}
+
+.fixyNav {
+    position: fixed;
+    top: 0;
+}
+
+.navpad {
+    padding: 15px;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 100.3%;
+}
+
+.descBG {
+    z-index:8;
+    filter: blur(8px);
+    background-size:100%;
+}
+
+#descriptionField{
+    z-index:10;
 }

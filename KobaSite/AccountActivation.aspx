@@ -19,16 +19,7 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <%--<div class="parallax-group">--%>           <%--  <img class="back" src="KobaSiteLoginWallpaper.png" />--%>
-        
-        <!--
-            <div class="video-background">
-                <div class="video-foreground">
-                <iframe id="bgVidLink" runat="server" src="https://www.youtube.com/embed/fpViZkhpPHk?controls=0&iv_load_policy=3&showinfo=0&rel=0&autoplay=1&loop=1&modestbranding=0&playlist=fpViZkhpPHk" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div> -->    
+    <form id="form1" runat="server">          
 
            <div class="lblWelcome text-center">
                <asp:Label ID="lblActivate" runat="server" Text="Activate Account" Font-Bold="False" Font-Names="Yu Gothic UI Light" Font-Size="35pt" ForeColor="White"></asp:Label>
@@ -51,15 +42,8 @@
                     <asp:Button ID="btnLogin" class="loginButtons" runat="server" Text="Login" ForeColor="White" Width="170px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" Visible="false" OnClick="btnLogin_Click"/>
                     <asp:Button ID="btnActivate" class="loginButtons" runat="server" Text="Activate" Width="170px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnActivate_Click"/>
                     &emsp;<asp:Button ID="btnResendEmail" class="createUserBtn" runat="server" Text="Resend Activation Email" ForeColor="White" Width="300px" Font-Names="Yu Gothic UI Light" Font-Size="Medium" Height="60px" OnClick="btnResendEmail_Click"/>
-
                 </div>
-            </div>
-        <%--</div>--%>
-
-        
-
-        
+            </div>       
     </form>
-
 </body>
 </html>

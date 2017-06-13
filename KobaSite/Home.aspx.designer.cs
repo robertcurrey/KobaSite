@@ -22,6 +22,24 @@ namespace KobaSite {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lblNavBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNavBrand;
+        
+        /// <summary>
+        /// lblLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLogout;
+        
+        /// <summary>
         /// sm control.
         /// </summary>
         /// <remarks>
@@ -148,31 +166,31 @@ namespace KobaSite {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// btnRadio2 control.
+        /// DJJeNy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRadio2;
+        protected global::System.Web.UI.WebControls.ImageButton DJJeNy;
         
         /// <summary>
-        /// btnStaySee control.
+        /// StaySee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStaySee;
+        protected global::System.Web.UI.WebControls.ImageButton StaySee;
         
         /// <summary>
-        /// btnPixl control.
+        /// Pixl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPixl;
+        protected global::System.Web.UI.WebControls.ImageButton Pixl;
         
         /// <summary>
         /// lofiRadioList control.
@@ -254,6 +272,15 @@ namespace KobaSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFalloutRadio;
+        
+        /// <summary>
+        /// descriptionPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl descriptionPanel;
         
         /// <summary>
         /// UpdatePanel2 control.

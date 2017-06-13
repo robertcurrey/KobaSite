@@ -16,6 +16,7 @@ namespace KobaSite
     public partial class Home : System.Web.UI.Page
     {
         DBManager objDBM = new DBManager();
+        DataSet allYTURLS = new DataSet();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +24,14 @@ namespace KobaSite
             {
                 Response.Redirect("Welcome.aspx");
             }
+
+            allYTURLS = objDBM.GetAllURLS();
+
+        }
+
+        public string getYouTubeThumbnail(string YoutubeUrl)
+        {
+            return "http://img.youtube.com/vi/" + YoutubeUrl + "/mqdefault.jpg";
         }
 
         //SCRIPTS//////////////////////////////////////////////////////////////////
@@ -57,6 +66,35 @@ namespace KobaSite
             lofiRadioList.Visible = false;
             soundtrackRadioList.Visible = false;
             RadioListScrollToBottom();
+
+            foreach (DataTable table in allYTURLS.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                        //get the next radio/link combo
+                        string dbRadio = (row["RadioName"]).ToString();
+                        string dbLinkExt = (row["ThumbnailExt"]).ToString();
+
+                        switch (dbRadio)
+                        {
+                            case "Pixl":
+                                {
+                                    Pixl.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                    break;
+                                }
+                            case "DJJeNy":
+                                {
+                                    DJJeNy.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                    break;
+                                }
+                            case "StaySee":
+                                {
+                                    StaySee.ImageUrl = getYouTubeThumbnail(dbLinkExt);
+                                    break;
+                                }
+                        }
+                }
+            }
         }
 
         protected void btnLoFi_Click1(object sender, ImageClickEventArgs e)
@@ -77,8 +115,9 @@ namespace KobaSite
             RadioListScrollToBottom();
         }
         //----------------------------------------------------------------------------
-        
+
         //RADIO STATION BUTTONS/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Nourish Button Click
         protected void btnRadio1_Click(object sender, EventArgs e)
         {
             lblDescription.Text = ("Description: " + btnRadio1.Text);
@@ -88,12 +127,13 @@ namespace KobaSite
             DescriptionFieldScrollToBottom();
         }
 
+        //DJJeNy Button Click
         protected void btnRadio2_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnRadio2.Text);
+            lblDescription.Text = ("Description: DJ JeNy");
             lblRadioDescription.Text = "Get the party started with the hottest remixes of the best music of the year.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnRadio2.Text;
+            Session["SelectedRadio"] = DJJeNy.ID;
             DescriptionFieldScrollToBottom();
         }
 
@@ -108,19 +148,19 @@ namespace KobaSite
 
         protected void btnStaySee_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnStaySee.Text);
+            lblDescription.Text = ("Description: Stay See");
             lblRadioDescription.Text = "Chill out, and have some good times with these groovy vibes.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnStaySee.Text;
+            Session["SelectedRadio"] = StaySee.ID;
             DescriptionFieldScrollToBottom();
         }
 
         protected void btnPixl_Click(object sender, EventArgs e)
         {
-            lblDescription.Text = ("Description: " + btnPixl.Text);
+            lblDescription.Text = ("Description: Pixl Radio");
             lblRadioDescription.Text = "Featuring the best of what the scene has to offer, relax, study, or party with Pixl Radio.";
             descriptionField.Visible = true;
-            Session["SelectedRadio"] = btnPixl.Text;
+            Session["SelectedRadio"] = Pixl.ID;
             DescriptionFieldScrollToBottom();
         }
 

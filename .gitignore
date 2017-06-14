@@ -262,3 +262,4 @@ __pycache__/
 /KobaSite/Classes/DBConnect.cs
 /KobaSite/Classes/DBManager.cs
 /KobaSite/Classes/EmailModules.cs
+/KobaSite/Classes/DataInterface.cs
